@@ -231,7 +231,7 @@
 
       const formData = new FormData(contactForm);
 
-      fetch("https://formsubmit.co/ajax/patelmit167@.com", {
+      fetch("https://formsubmit.co/ajax/patelmit167@gmail.com", {
         method: "POST",
         body: formData
       })
