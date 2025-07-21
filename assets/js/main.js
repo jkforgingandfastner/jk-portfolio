@@ -225,106 +225,6 @@
 
   /* START: with formsubmit.co message send to email */
 
-  // const contactForm = document.getElementById("contact-form");
-
-  // if (contactForm) {
-  //   contactForm.addEventListener("submit", function(e) {
-  //     e.preventDefault();
-
-  //     const formData = new FormData(contactForm);
-
-  //     fetch("https://formsubmit.co/ajax/patelmit167@gmail.com", {
-  //       method: "POST",
-  //       body: formData
-  //     })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log(data);
-  //       showToast("Your message has been sent successfully!");
-  //       contactForm.reset(); // clear form after submit
-  //     })
-  //     .catch(error => {
-  //       console.error(error);
-  //       showToast("There was an error sending your message. Please try again.");
-  //     });
-  //   });
-
-  //   function showToast(message) {
-  //     const toast = document.createElement("div");
-  //     toast.textContent = message;
-  //     toast.style.position = "fixed";
-  //     toast.style.bottom = "20px";
-  //     toast.style.right = "20px";
-  //     toast.style.backgroundColor = "#28a745";
-  //     toast.style.color = "white";
-  //     toast.style.padding = "10px 20px";
-  //     toast.style.borderRadius = "5px";
-  //     toast.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
-  //     toast.style.zIndex = "9999";
-  //     toast.style.fontSize = "14px";
-  //     toast.style.opacity = "0";
-  //     toast.style.transition = "opacity 0.3s ease";
-
-  //     document.body.appendChild(toast);
-
-  //     setTimeout(() => {
-  //       toast.style.opacity = "1";
-  //     }, 100);
-
-  //     setTimeout(() => {
-  //       toast.style.opacity = "0";
-  //       setTimeout(() => {
-  //         toast.remove();
-  //       }, 300);
-  //     }, 3000);
-  //   }
-  // }
-
-  /* END: with formsubmit.co message send to email */
-
-  /* START: with fromspree message send to email */
-
-  function showToast(message) {
-    // Create toast container if it doesn't exist
-    let toastContainer = document.getElementById("toast-container");
-    if (!toastContainer) {
-      toastContainer = document.createElement("div");
-      toastContainer.id = "toast-container";
-      toastContainer.style.position = "fixed";
-      toastContainer.style.top = "20px";
-      toastContainer.style.right = "20px";
-      toastContainer.style.zIndex = "9999";
-      document.body.appendChild(toastContainer);
-    }
-
-    // Create the toast message
-    const toast = document.createElement("div");
-      toast.innerText = message;
-      toast.style.background = "#333";
-      toast.style.color = "#fff";
-      toast.style.padding = "10px 20px";
-      toast.style.marginTop = "10px";
-      toast.style.borderRadius = "4px";
-      toast.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
-      toast.style.opacity = "0";
-      toast.style.transition = "opacity 0.3s ease";
-
-      toastContainer.appendChild(toast);
-
-      // Fade in
-      setTimeout(() => {
-        toast.style.opacity = "1";
-      }, 100);
-
-      // Remove after 3 seconds
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        setTimeout(() => {
-          toast.remove();
-        }, 300);
-      }, 3000);
-  }
-
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
@@ -333,24 +233,124 @@
 
       const formData = new FormData(contactForm);
 
-      fetch("https://formspree.io/f/myzpkajv", {
+      fetch("https://formsubmit.co/ajax/patelmit167@gmail.com", {
         method: "POST",
-        headers: {
-          'Accept': 'application/json'
-        },
         body: formData
       })
       .then(response => response.json())
       .then(data => {
+        console.log(data);
         showToast("Your message has been sent successfully!");
-        contactForm.reset();
+        contactForm.reset(); // clear form after submit
       })
       .catch(error => {
         console.error(error);
         showToast("There was an error sending your message. Please try again.");
       });
     });
+
+    function showToast(message) {
+      const toast = document.createElement("div");
+      toast.textContent = message;
+      toast.style.position = "fixed";
+      toast.style.bottom = "20px";
+      toast.style.right = "20px";
+      toast.style.backgroundColor = "#28a745";
+      toast.style.color = "white";
+      toast.style.padding = "10px 20px";
+      toast.style.borderRadius = "5px";
+      toast.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+      toast.style.zIndex = "9999";
+      toast.style.fontSize = "14px";
+      toast.style.opacity = "0";
+      toast.style.transition = "opacity 0.3s ease";
+
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = "1";
+      }, 100);
+
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        setTimeout(() => {
+          toast.remove();
+        }, 300);
+      }, 3000);
+    }
   }
+
+  /* END: with formsubmit.co message send to email */
+
+  /* START: with fromspree message send to email */
+
+  // function showToast(message) {
+  //   // Create toast container if it doesn't exist
+  //   let toastContainer = document.getElementById("toast-container");
+  //   if (!toastContainer) {
+  //     toastContainer = document.createElement("div");
+  //     toastContainer.id = "toast-container";
+  //     toastContainer.style.position = "fixed";
+  //     toastContainer.style.top = "20px";
+  //     toastContainer.style.right = "20px";
+  //     toastContainer.style.zIndex = "9999";
+  //     document.body.appendChild(toastContainer);
+  //   }
+
+  //   // Create the toast message
+  //   const toast = document.createElement("div");
+  //     toast.innerText = message;
+  //     toast.style.background = "#333";
+  //     toast.style.color = "#fff";
+  //     toast.style.padding = "10px 20px";
+  //     toast.style.marginTop = "10px";
+  //     toast.style.borderRadius = "4px";
+  //     toast.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+  //     toast.style.opacity = "0";
+  //     toast.style.transition = "opacity 0.3s ease";
+
+  //     toastContainer.appendChild(toast);
+
+  //     // Fade in
+  //     setTimeout(() => {
+  //       toast.style.opacity = "1";
+  //     }, 100);
+
+  //     // Remove after 3 seconds
+  //     setTimeout(() => {
+  //       toast.style.opacity = "0";
+  //       setTimeout(() => {
+  //         toast.remove();
+  //       }, 300);
+  //     }, 3000);
+  // }
+
+  // const contactForm = document.getElementById("contact-form");
+
+  // if (contactForm) {
+  //   contactForm.addEventListener("submit", function(e) {
+  //     e.preventDefault();
+
+  //     const formData = new FormData(contactForm);
+
+  //     fetch("https://formspree.io/f/myzpkajv", {
+  //       method: "POST",
+  //       headers: {
+  //         'Accept': 'application/json'
+  //       },
+  //       body: formData
+  //     })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       showToast("Your message has been sent successfully!");
+  //       contactForm.reset();
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //       showToast("There was an error sending your message. Please try again.");
+  //     });
+  //   });
+  // }
   
   /* END: with fromspree message send to email */
 
