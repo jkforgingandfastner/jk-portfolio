@@ -220,6 +220,7 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  document.getElementById("currentYear").textContent = "Copyright © " + new Date().getFullYear();
   
   // Contact form submission with toast notification
 
