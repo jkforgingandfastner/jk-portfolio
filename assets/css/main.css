@@ -907,27 +907,24 @@ section,
 }
 
 .hero .animated {
-  animation: down-up 3s ease-in-out infinite;
+  animation: up-down-continuous 6s linear infinite;
 }
 
-@keyframes down-up {
+@keyframes up-down-continuous {
   0% {
     transform: translateY(0);
-    opacity: 1;
   }
-  40% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  60% {
+  50% {
     transform: translateY(-100%);
-    opacity: 0;
+  }
+  50.01% {
+    transform: translateY(100%);
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
   }
 }
+
 
 @media (max-width: 640px) {
   .hero h1 {
