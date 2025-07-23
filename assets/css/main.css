@@ -907,7 +907,11 @@ section,
 }
 
 .hero .animated {
-  animation: up-down-continuous 6s linear infinite;
+  animation: up-down-continuous 10s linear infinite;
+}
+
+.hero .animated:hover {
+  animation-play-state: paused;
 }
 
 @keyframes up-down-continuous {
