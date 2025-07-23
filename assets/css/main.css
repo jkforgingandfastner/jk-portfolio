@@ -941,14 +941,14 @@ section,
     line-height: 24px;
     margin-bottom: 30px;
   }
-  
+
   .hero-img {
     display: flex;
     justify-content: flex-start;
   }
 
   .hero-img img {
-    width: 250px; /* adjust as needed */
+    width: 350px; /* adjust as needed */
     height: auto;
   }
 
