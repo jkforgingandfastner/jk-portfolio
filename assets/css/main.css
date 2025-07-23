@@ -906,6 +906,29 @@ section,
   animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
 }
 
+.hero .animated {
+  animation: down-up 3s ease-in-out infinite;
+}
+
+@keyframes down-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 640px) {
   .hero h1 {
     font-size: 28px;
