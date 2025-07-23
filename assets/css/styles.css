@@ -636,10 +636,6 @@ progress {
   content: "— ";
 }
 
-.img-fluid {
-  height: 515px;
-  width: 650px;
-}
 
 .img-thumbnail {
   padding: 0.25rem;
