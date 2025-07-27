@@ -902,6 +902,41 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+.hero-img {
+  position: relative;
+  width: 650px;
+  height: 550px;
+}
+
+.hero-img .bg-static {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-img .lift-animated {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  animation: up-down-continuous 10s linear infinite;
+}
+
+.lift-animated:hover {
+  animation-play-state: paused;
+}
+
+@keyframes up-down-continuous {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 .hero .animated {
   animation: up-down-continuous 10s linear infinite;
 }
@@ -937,16 +972,16 @@ section,
     line-height: 24px;
     margin-bottom: 30px;
   }
-
+/* 
   .hero-img {
     display: flex;
     justify-content: flex-start;
   }
 
   .hero-img img {
-    width: 350px; /* adjust as needed */
+    width: 350px;
     height: auto;
-  }
+  } */
 
   .hero .btn-get-started,
   .hero .btn-watch-video {
