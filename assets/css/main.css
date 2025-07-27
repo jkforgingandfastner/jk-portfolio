@@ -903,10 +903,6 @@ section,
 }
 
 .hero .animated {
-  animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
-}
-
-.hero .animated {
   animation: up-down-continuous 10s linear infinite;
 }
 
@@ -955,16 +951,6 @@ section,
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 13px;
-  }
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
   }
 }
 
