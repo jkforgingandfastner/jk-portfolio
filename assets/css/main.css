@@ -918,22 +918,21 @@ section,
 
 
 
-@keyframes float {
+.hero .animated {
+  animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
   0% {
-    transform: translateY(0) scale(1);
+    transform: rotate(-2deg);
   }
   50% {
-    transform: translateY(-10px) scale(1.02);
+    transform: rotate(2deg);
   }
   100% {
-    transform: translateY(0) scale(1);
+    transform: rotate(-2deg);
   }
 }
-
-.hero .animated {
-  animation: float 3s ease-in-out infinite;
-}
-
 
 @media (max-width: 640px) {
   .hero h1 {
