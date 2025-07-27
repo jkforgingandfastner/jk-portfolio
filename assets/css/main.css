@@ -924,7 +924,7 @@ section,
   left: 0;
   width: 250px;
   height: 250px;
-  animation: up-down-continuous 4s ease-in-out infinite;
+  animation: up-down-continuous 10s ease-in-out infinite;
   z-index: 2;
 }
 
@@ -933,7 +933,10 @@ section,
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-100%);
+  }
+  50.01% {
+    transform: translateY(100%);
   }
   100% {
     transform: translateY(0);
