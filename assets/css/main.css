@@ -919,18 +919,18 @@ section,
 
 
 .hero .animated {
-  animation: swing 2s ease-in-out infinite;
+  animation: pulse 2s ease-in-out infinite;
 }
 
-@keyframes swing {
+@keyframes pulse {
   0% {
-    transform: rotate(-2deg);
+    transform: scale(1);
   }
   50% {
-    transform: rotate(2deg);
+    transform: scale(1.05);
   }
   100% {
-    transform: rotate(-2deg);
+    transform: scale(1);
   }
 }
 
