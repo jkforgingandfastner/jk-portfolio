@@ -903,10 +903,6 @@ section,
 }
 
 .hero .animated {
-  animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
-}
-
-.hero .animated {
   animation: up-down-continuous 10s linear infinite;
 }
 
