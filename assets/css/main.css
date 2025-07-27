@@ -902,50 +902,6 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-
-.lift-container {
-  position: relative;
-  width: 650px;
-  height: 550px;
-}
-
-.background-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 650px;
-  height: 550px;
-  z-index: 1;
-}
-
-.lift-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 250px;
-  animation: up-down-continuous 10s ease-in-out infinite;
-  z-index: 2;
-}
-
-@keyframes up-down-continuous {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-100%);
-  }
-  50.01% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-
-
-
 /* .hero .animated {
   animation: up-down-continuous 10s linear infinite;
 }
@@ -969,6 +925,9 @@ section,
   }
 } */
 
+.hero .animated {
+  animation: up-down 1.5s ease-in-out infinite alternate-reverse both;
+}
 
 @media (max-width: 640px) {
   .hero h1 {
@@ -995,6 +954,16 @@ section,
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 13px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
   }
 }
 
