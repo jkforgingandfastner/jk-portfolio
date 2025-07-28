@@ -250,81 +250,81 @@
       });
     });
 
-    function showToast(message) {
-      const toast = document.createElement("div");
-      toast.textContent = message;
-      toast.style.position = "fixed";
-      toast.style.bottom = "20px";
-      toast.style.right = "20px";
-      toast.style.backgroundColor = "#28a745";
-      toast.style.color = "white";
-      toast.style.padding = "10px 20px";
-      toast.style.borderRadius = "5px";
-      toast.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
-      toast.style.zIndex = "9999";
-      toast.style.fontSize = "14px";
-      toast.style.opacity = "0";
-      toast.style.transition = "opacity 0.3s ease";
+    // function showToast(message) {
+    //   const toast = document.createElement("div");
+    //   toast.textContent = message;
+    //   toast.style.position = "fixed";
+    //   toast.style.bottom = "20px";
+    //   toast.style.right = "20px";
+    //   toast.style.backgroundColor = "#28a745";
+    //   toast.style.color = "white";
+    //   toast.style.padding = "10px 20px";
+    //   toast.style.borderRadius = "5px";
+    //   toast.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+    //   toast.style.zIndex = "9999";
+    //   toast.style.fontSize = "14px";
+    //   toast.style.opacity = "0";
+    //   toast.style.transition = "opacity 0.3s ease";
 
-      document.body.appendChild(toast);
+    //   document.body.appendChild(toast);
 
-      setTimeout(() => {
-        toast.style.opacity = "1";
-      }, 100);
+    //   setTimeout(() => {
+    //     toast.style.opacity = "1";
+    //   }, 100);
 
-      setTimeout(() => {
-        toast.style.opacity = "0";
-        setTimeout(() => {
-          toast.remove();
-        }, 300);
-      }, 3000);
-    }
+    //   setTimeout(() => {
+    //     toast.style.opacity = "0";
+    //     setTimeout(() => {
+    //       toast.remove();
+    //     }, 300);
+    //   }, 3000);
+    // }
   }
 
   /* END: with formsubmit.co message send to email */
 
   /* START: with fromspree message send to email */
 
-  // function showToast(message) {
-  //   // Create toast container if it doesn't exist
-  //   let toastContainer = document.getElementById("toast-container");
-  //   if (!toastContainer) {
-  //     toastContainer = document.createElement("div");
-  //     toastContainer.id = "toast-container";
-  //     toastContainer.style.position = "fixed";
-  //     toastContainer.style.top = "20px";
-  //     toastContainer.style.right = "20px";
-  //     toastContainer.style.zIndex = "9999";
-  //     document.body.appendChild(toastContainer);
-  //   }
+  function showToast(message) {
+    // Create toast container if it doesn't exist
+    let toastContainer = document.getElementById("toast-container");
+    if (!toastContainer) {
+      toastContainer = document.createElement("div");
+      toastContainer.id = "toast-container";
+      toastContainer.style.position = "fixed";
+      toastContainer.style.top = "20px";
+      toastContainer.style.right = "20px";
+      toastContainer.style.zIndex = "9999";
+      document.body.appendChild(toastContainer);
+    }
 
-  //   // Create the toast message
-  //   const toast = document.createElement("div");
-  //     toast.innerText = message;
-  //     toast.style.background = "#333";
-  //     toast.style.color = "#fff";
-  //     toast.style.padding = "10px 20px";
-  //     toast.style.marginTop = "10px";
-  //     toast.style.borderRadius = "4px";
-  //     toast.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
-  //     toast.style.opacity = "0";
-  //     toast.style.transition = "opacity 0.3s ease";
+    // Create the toast message
+    const toast = document.createElement("div");
+      toast.innerText = message;
+      toast.style.background = "#333";
+      toast.style.color = "#fff";
+      toast.style.padding = "10px 20px";
+      toast.style.marginTop = "10px";
+      toast.style.borderRadius = "4px";
+      toast.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+      toast.style.opacity = "0";
+      toast.style.transition = "opacity 0.3s ease";
 
-  //     toastContainer.appendChild(toast);
+      toastContainer.appendChild(toast);
 
-  //     // Fade in
-  //     setTimeout(() => {
-  //       toast.style.opacity = "1";
-  //     }, 100);
+      // Fade in
+      setTimeout(() => {
+        toast.style.opacity = "1";
+      }, 100);
 
-  //     // Remove after 3 seconds
-  //     setTimeout(() => {
-  //       toast.style.opacity = "0";
-  //       setTimeout(() => {
-  //         toast.remove();
-  //       }, 300);
-  //     }, 3000);
-  // }
+      // Remove after 3 seconds
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        setTimeout(() => {
+          toast.remove();
+        }, 300);
+      }, 3000);
+  }
 
   // const contactForm = document.getElementById("contact-form");
 
